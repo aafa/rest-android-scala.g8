@@ -1,0 +1,1 @@
+A README for $name$ project
