@@ -1,0 +1,4 @@
+target/
+boot/
+.DS_Store
+local.properties
