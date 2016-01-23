@@ -1,4 +1,4 @@
-target/
-boot/
-.DS_Store
 local.properties
+target/
+.DS_Store
+.idea

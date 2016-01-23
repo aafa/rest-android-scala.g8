@@ -1,3 +1,4 @@
+
 package $package$.helpers;
 
 import java.security.MessageDigest;
@@ -17,7 +18,7 @@ public class SimpleSHA1 {
         return buf.toString();
     }
 
-    public static String hash(String text)  {
+    public static String hash(String text) {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-1");
             md.update(text.getBytes("iso-8859-1"), 0, text.length());

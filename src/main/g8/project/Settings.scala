@@ -1,10 +1,4 @@
-
-
 object Settings {
-
-  var debugBuild = false
-
-  lazy val dexFiles: Seq[String] = io.Source.fromFile("core/main-dex-list.txt").getLines().toSeq
 
   lazy val apkExcludeStrings: Seq[String] = Seq(
     "META-INF/LICENSE.txt",

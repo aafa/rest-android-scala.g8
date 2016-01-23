@@ -1,4 +1,3 @@
-
 import android.Keys._
 import sbt.Keys._
 import sbt._
@@ -14,6 +13,7 @@ object Build extends android.AutoBuild {
   }
 
   lazy val appsSettings = Seq(
+    name := "$name$",
     versionName in Android := Some("1.0.0"),
     scalaVersion := Versions.scalaVersion,
     platformTarget in Android := Versions.platformTarget,
@@ -22,13 +22,13 @@ object Build extends android.AutoBuild {
     buildTypes in Android +=("debug", Seq(
       proguardOptions in Android ++= Settings.proguardDebug,
       scalacOptions ++= Seq("-feature", "-deprecation"),
-      minSdkVersion in Android := "21"
+      minSdkVersion in Android := "$target$"
     )),
 
     buildTypes in Android +=("release", Seq(
       proguardOptions in Android ++= Settings.proguardRelease,
       scalacOptions ++= Seq("-feature", "-optimise"),
-      minSdkVersion in Android := "14"
+      minSdkVersion in Android := "$minSdk$"
     )),
 
 

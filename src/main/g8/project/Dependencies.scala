@@ -16,11 +16,19 @@ object Dependencies {
   lazy val libs: Seq[sbt.Setting[_]] = Seq(
     resolvers ++= resolverUrls,
 
-    libraryDependencies += "com.android.support" % "support-v4" % "23.1.1",
-    libraryDependencies += "org.macroid" %% "macroid" % Versions.macroidVersion,
-    libraryDependencies += "com.squareup.retrofit" % "retrofit" % "1.9.0" exclude("gson", "gson"),
-    libraryDependencies += "com.squareup.okhttp" % "okhttp" % "2.3.0",
-    libraryDependencies += "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.5.0"
+    libraryDependencies ++= Seq(
+      "com.android.support" % "support-v4" % "23.1.1",
+      "org.macroid" %% "macroid" % Versions.macroidVersion,
+      "com.squareup.retrofit" % "retrofit" % "1.9.0" exclude("gson", "gson"),
+      "com.squareup.okhttp" % "okhttp" % "2.3.0",
+      "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.5.0"
+    ),
+
+    fork in Test := true,
+    libraryDependencies ++= Seq(
+      "com.geteit" %% "robotest" % "0.12" % Test,
+      "org.scalatest" %% "scalatest" % "2.2.5" % Test
+    )
 
   )
 
