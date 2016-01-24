@@ -7,5 +7,5 @@ import retrofit.http._
   * Created by $developer$
   */
 trait APIServiceDescriptor{
-  @GET("/api/call") def apiCall : Unit
+  @GET("/api/call") def apiCall : Model
 }
