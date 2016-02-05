@@ -18,7 +18,7 @@ object Dependencies {
 
     libraryDependencies ++= Seq(
       "com.android.support" % "support-v4" % "23.1.1",
-      "org.macroid" %% "macroid" % Versions.macroidVersion,
+      "org.macroid" %% "macroid" % "2.0.0-M4",
       "com.squareup.retrofit" % "retrofit" % "1.9.0" exclude("gson", "gson"),
       "com.squareup.okhttp" % "okhttp" % "2.3.0",
       "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.5.0"

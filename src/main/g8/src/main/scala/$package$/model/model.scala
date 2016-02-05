@@ -1,4 +1,10 @@
 package $package$.model
 
+import com.fasterxml.jackson.annotation.JsonProperty
 
-case class Model(var name : String) 
+// JsonProperty is mandatory for scala case classes
+case class Ticker(
+                   @JsonProperty("last_price") var last_price : String
+                 ) {
+
+}

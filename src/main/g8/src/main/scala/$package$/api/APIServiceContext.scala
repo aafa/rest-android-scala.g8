@@ -1,7 +1,9 @@
-package $package$.service
+package $package$.api
 
+import $package$.api.APIServiceDescriptor
 import android.content.Context
 import $package$.BuildConfig
+import $package$.R
 import $package$.helpers.JacksonConverter
 import com.fasterxml.jackson.databind.{DeserializationFeature, ObjectMapper}
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
@@ -33,6 +35,8 @@ class APIServiceContext(ctx: Context)  {
   private var restAdapter: RestAdapter = null
   lazy val serviceDescriptor: APIServiceDescriptor = createAPIServiceDescriptor
 
+  val url = ctx.getString(R.string.api_url)
+
   {
     val jackson = new ObjectMapper() with ScalaObjectMapper
     jackson.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
@@ -41,7 +45,7 @@ class APIServiceContext(ctx: Context)  {
     val converter = new JacksonConverter(jackson)
 
     val builder = new RestAdapter.Builder()
-      .setEndpoint("")
+      .setEndpoint(url)
       .setConverter(converter)
 
     restAdapter = builder.build
@@ -54,7 +58,7 @@ class APIServiceContext(ctx: Context)  {
   }
 
 
-  def createAPIServiceDescriptor: APIServiceDescriptor = {
+  private def createAPIServiceDescriptor: APIServiceDescriptor = {
     restAdapter.create(classOf[APIServiceDescriptor])
   }
 

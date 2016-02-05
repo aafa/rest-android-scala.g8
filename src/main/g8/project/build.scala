@@ -9,7 +9,7 @@ object Build extends android.AutoBuild {
   lazy val p = TaskKey[Unit]("p", "protify shortcut")
 
   lazy val app = {
-    Project(id = "app", base = file(".")).settings(Defaults.defaultSettings ++ android.Plugin.androidBuild ++ appsSettings ++ Dependencies.libs: _*)
+    Project(id = "app", base = file(".")).settings(appsSettings ++ Dependencies.libs: _*)
   }
 
   lazy val appsSettings = Seq(
@@ -22,7 +22,7 @@ object Build extends android.AutoBuild {
     buildTypes in Android +=("debug", Seq(
       proguardOptions in Android ++= Settings.proguardDebug,
       scalacOptions ++= Seq("-feature", "-deprecation"),
-      minSdkVersion in Android := "$target$"
+      minSdkVersion in Android := "$targetSdk$"
     )),
 
     buildTypes in Android +=("release", Seq(

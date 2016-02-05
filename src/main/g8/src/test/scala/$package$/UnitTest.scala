@@ -1,5 +1,6 @@
 package $package$
 
+import $package$.R
 import android.os.Build.VERSION_CODES.LOLLIPOP
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config

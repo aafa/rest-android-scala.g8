@@ -1,6 +1,8 @@
 package $package$.activity
 
 
+import $package$.api.UiService
+import $package$.model.Ticker
 import android.content.{Intent, Context}
 import android.view.View
 import android.widget.{TextView, ProgressBar, LinearLayout}
@@ -14,17 +16,29 @@ import android.os.Bundle
   * Created by $developer$
   */
 
-class MainActivity extends Activity with Contexts[Activity]{
+class MainActivity extends Activity with Contexts[Activity] with MainActivityView with UiService {
 
   override def onCreate(b: Bundle): Unit = {
     super.onCreate(b)
     setTitle("Hello world, $name$!")
-
-    setContentView(ui)
+    setContentView(ui.get)
+    update
   }
 
-  def ui: View = l[LinearLayout](
-    w[TextView] <~ text("Welcome to $name$!")
-  ).get
+  def update = api(_.pubticker("btcusd")) mapUi updateView
+
+  def updateView(t: Ticker) = runUi(
+    lastPriceSlot <~ text("Last price " + t.last_price)
+  )
+}
+
+trait MainActivityView {
+  var lastPriceSlot = slot[TextView]
+
+  def ui(implicit context: ActivityContext): Ui[LinearLayout] = {
+    l[LinearLayout](
+      w[TextView] <~ wire(lastPriceSlot)
+    )
+  }
 
 }

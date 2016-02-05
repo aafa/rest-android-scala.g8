@@ -1,5 +1,6 @@
-package $package$.service
+package $package$.api
 
+import $package$.model.Ticker
 import retrofit.http._
 
 /**
@@ -7,5 +8,5 @@ import retrofit.http._
   * Created by $developer$
   */
 trait APIServiceDescriptor{
-  @GET("/api/call") def apiCall : Model
+  @GET("/pubticker/{symbol}") def pubticker(@Path("symbol") symbol : String) : Ticker
 }
