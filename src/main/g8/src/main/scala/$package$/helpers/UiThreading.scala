@@ -5,7 +5,8 @@ import macroid.UiThreadExecutionContext
 import scala.concurrent.{Future, ExecutionContext}
 
 /**
-  * Created by Alexey Afanasev on 24.01.16.
+  * Copyright (c) $copyright$. All rights reserved.
+  * Created by $developer$
   */
 trait UiThreading {
   implicit val ec: ExecutionContext = ExecutionContext.global
