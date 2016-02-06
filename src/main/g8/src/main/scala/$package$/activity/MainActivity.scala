@@ -28,7 +28,7 @@ class MainActivity extends Activity with Contexts[Activity] with MainActivityVie
   def update = api(_.pubticker("btcusd")) mapUi updateView
 
   def updateView(t: Ticker) = runUi(
-    lastPriceSlot <~ text("Last price " + t.last_price)
+    lastPriceSlot <~ text("Whoa! Bitcoin price is " + t.last_price)
   )
 }
 
