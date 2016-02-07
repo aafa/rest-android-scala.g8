@@ -33,7 +33,6 @@ object Build extends android.AutoBuild {
 
 
     run <<= run in Android,
-    test <<= test in Android,
     install <<= install in Android,
     packageDebug <<= packageDebug in Android,
 
