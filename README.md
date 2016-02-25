@@ -1,6 +1,8 @@
+[![Join the chat at https://gitter.im/aafa/rest-android-scala.g8](https://badges.gitter.im/aafa/rest-android-scala.g8.svg)](https://gitter.im/aafa/rest-android-scala.g8?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
 ## Description
 
-[![Join the chat at https://gitter.im/aafa/rest-android-scala.g8](https://badges.gitter.im/aafa/rest-android-scala.g8.svg)](https://gitter.im/aafa/rest-android-scala.g8?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A template for REST client implementation based on [retrofit](https://github.com/square/retrofit)
 
 Ui layout is done with [Macroid](http://macroid.github.io/).
