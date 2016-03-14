@@ -3,10 +3,11 @@
 
 ## Description
 
-A template for Android REST client implementation based on [retrofit](https://github.com/square/retrofit)
+A template for Android REST client implementation.
 
 ## Inside 
-- [android-sdk-plugin](https://github.com/pfn/android-sdk-plugin) 
+- [android-sdk-plugin](https://github.com/pfn/android-sdk-plugin) to run on Android
+- [Retrofit](https://github.com/square/retrofit) to create REST interface
 - [Macroid](http://macroid.github.io/) for Ui layout 
 - [Robolectric](robolectric.org) for tests
 
@@ -21,7 +22,7 @@ sbt run
 ```
 
 ## Usage
-`sbt run` will try to run an app on a device (actual or emulator), make sure you have some `adb devices` ready.
-`sbt quickTest` will do quick tests with [robolectric](robolectric.org) setup on your regular JVM.
+- `sbt run` will try to run an app on a device (actual or emulator), make sure you have some `adb devices` ready.
+- `sbt quickTest` will do quick tests with [robolectric](robolectric.org) setup on your regular JVM.
 
 You will get a simple client implementaion with one actual call to https://api.bitfinex.com/v1 REST API to demostrate how things works.
