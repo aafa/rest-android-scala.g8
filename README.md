@@ -9,7 +9,7 @@ A template for Android REST client implementation.
 - [android-sdk-plugin](https://github.com/pfn/android-sdk-plugin) to run on Android
 - [Retrofit](https://github.com/square/retrofit) to create REST interface
 - [Macroid](http://macroid.github.io/) for Ui layout 
-- [Robolectric](robolectric.org) for tests
+- [Robolectric](http://robolectric.org/) for tests
 
 
 ## Install
