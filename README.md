@@ -3,7 +3,7 @@
 
 ## Description
 
-A template for Android REST client implementation.
+SBT project template for Android REST client.
 
 ## Inside 
 - [android-sdk-plugin](https://github.com/pfn/android-sdk-plugin) to run on Android
