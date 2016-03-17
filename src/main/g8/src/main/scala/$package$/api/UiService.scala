@@ -7,10 +7,7 @@ import android.content.Context
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 
-/**
-  * Copyright (c) $copyright$. All rights reserved.
-  * Created by $developer$
-  */
+
 trait UiService extends UiThreading {
   this: Context =>
 

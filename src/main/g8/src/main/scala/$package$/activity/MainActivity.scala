@@ -11,11 +11,6 @@ import macroid._
 import android.app.Activity
 import android.os.Bundle
 
-/**
-  * Copyright (c) $copyright$. All rights reserved.
-  * Created by $developer$
-  */
-
 class MainActivity extends Activity with Contexts[Activity] with MainActivityView with UiService {
 
   override def onCreate(b: Bundle): Unit = {

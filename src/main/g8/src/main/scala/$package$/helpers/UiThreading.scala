@@ -4,9 +4,7 @@ import android.os.{Looper, Handler}
 import macroid.UiThreadExecutionContext
 import scala.concurrent.{Future, ExecutionContext}
 
-/**
-  * Created by Alexey Afanasev on 24.01.16.
-  */
+
 trait UiThreading {
   implicit val ec: ExecutionContext = ExecutionContext.global
 

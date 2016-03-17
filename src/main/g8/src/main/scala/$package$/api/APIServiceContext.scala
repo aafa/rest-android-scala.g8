@@ -10,10 +10,7 @@ import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
 import retrofit.RestAdapter
 
-/**
-  * Copyright (c) $copyright$. All rights reserved.
-  * Created by $developer$
-  */
+
 object APIServiceContext {
   var serviceContext: Option[APIServiceContext] = None
 
